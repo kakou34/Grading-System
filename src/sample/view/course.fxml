@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.CourseController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="tblGrades" layoutX="221.0" layoutY="120.0" onMouseClicked="#tblColClick" prefHeight="250.0"
+               prefWidth="449.0">
+        <columns>
+            <TableColumn fx:id="colCourseId" prefWidth="75.0" text="CourseID"/>
+            <TableColumn fx:id="colStudentId" prefWidth="75.0" text="StudentID"/>
+            <TableColumn fx:id="colGrade" prefWidth="75.0" text="Grade"/>
+        </columns>
+    </TableView>
+    <Separator layoutX="205.0" layoutY="35.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="9.0"/>
+    <Separator layoutX="5.0" layoutY="28.0" prefHeight="7.0" prefWidth="678.0"/>
+    <VBox layoutX="14.0" layoutY="32.0" prefHeight="204.0" prefWidth="56.0" spacing="22.0">
+        <Label text="StudentID">
+            <padding>
+                <Insets top="9.0"/>
+            </padding>
+        </Label>
+        <Label text="Grade"/>
+    </VBox>
+    <VBox layoutX="78.0" layoutY="35.0" prefHeight="225.0" prefWidth="122.0" spacing="15.0">
+        <TextField fx:id="txtStudentID" prefHeight="12.0" prefWidth="109.0"/>
+        <TextField fx:id="txtGrade" prefHeight="12.0" prefWidth="109.0"/>
+        <Button fx:id="btnAdd" layoutX="135.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnAddClick"
+                text="Add Grade"/>
+    </VBox>
+
+
+    <Label layoutX="218" layoutY="42.0" text="StudentID"/>
+    <TextField fx:id="txtID" layoutX="275.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0"/>
+    <Label layoutX="370.0" layoutY="42.0" text="New Grade"/>
+    <TextField fx:id="txtUpdateGrade" layoutX="435.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0"/>
+    <Button fx:id="btnUpdate" layoutX="530.0" layoutY="42.0" mnemonicParsing="false" onAction="#btnUpdate"
+            prefHeight="25.0" prefWidth="100.0" text="Update"/>
+    <Button fx:id="btnShowAll" layoutX="560.0" layoutY="83" mnemonicParsing="false" onAction="#btnShowAll"
+            prefHeight="25.0" prefWidth="100.0" text="Show All"/>
+
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.StudentController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <TableView fx:id="tblCourse" layoutX="221.0" layoutY="120.0" prefHeight="250.0"
+                   prefWidth="449.0">
+            <columns>
+                <TableColumn fx:id="colCourseId" prefWidth="75.0" text="CourseID"/>
+                <TableColumn fx:id="colStudentId" prefWidth="75.0" text="StudentID"/>
+                <TableColumn fx:id="colGrade" prefWidth="75.0" text="Grade"/>
+            </columns>
+        </TableView>
+        <TableView fx:id="tblCourse2" layoutX="221.0" layoutY="120.0" onMouseClicked="#tblColClick" prefHeight="250.0"
+                   prefWidth="449.0" visible="false">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="colCourseName" prefWidth="75.0" text="CourseName"/>
+                <TableColumn fx:id="colQuota" prefWidth="75.0" text="Quota"/>
+            </columns>
+        </TableView>
+        <Separator layoutX="205.0" layoutY="35.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="9.0"/>
+        <Separator layoutX="5.0" layoutY="28.0" prefHeight="7.0" prefWidth="678.0"/>
+        <Separator layoutX="5.0" layoutY="160" prefHeight="7.0" prefWidth="200.0"/>
+        <VBox layoutX="14.0" layoutY="32.0" prefHeight="204.0" prefWidth="56.0" spacing="22.0">
+            <Label text="courseID: ">
+                <padding>
+                    <Insets top="9.0"/>
+                </padding>
+            </Label>
+        </VBox>
+        <VBox layoutX="78.0" layoutY="40.0" prefHeight="225.0" prefWidth="122.0" spacing="15.0">
+            <TextField fx:id="txtCourseID" prefHeight="12.0" prefWidth="109.0"/>
+            <Button fx:id="btnShowGrade" layoutX="135.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnShowGradeClick"
+                    text="Show Grade" prefWidth="109.0"/>
+        </VBox>
+
+        <VBox layoutX="14.0" layoutY="170" prefHeight="204.0" prefWidth="80.0" spacing="22.0">
+            <Label text="Your grade: "/>
+            <Label text="Class average: "/>
+        </VBox>
+
+        <VBox layoutX="100" layoutY="170" prefHeight="204.0" prefWidth="80.0" spacing="22.0">
+            <Label fx:id="lblgrade"  prefWidth="80.0" text="--"/>
+            <Label fx:id="lblaverage" prefWidth="80.0" text="--"/>
+        </VBox>
+
+        <Label layoutX="218" layoutY="42.0" text="CourseID: "/>
+        <TextField fx:id="txtID" layoutX="275.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0"/>
+        <Button fx:id="btnUpdate" layoutX="370.0" layoutY="42.0" mnemonicParsing="false" onAction="#btnEnroll"
+                prefHeight="25.0" prefWidth="100.0" text="Enroll"/>
+        <Button fx:id="btnShowMine" layoutX="370.0" layoutY="83" mnemonicParsing="false" onAction="#btnShowMine"
+                prefHeight="25.0" prefWidth="140.0" text="Show My courses"/>
+        <Button fx:id="btnShowAll" layoutX="520.0" layoutY="83" mnemonicParsing="false" onAction="#btnShowAll"
+                prefHeight="25.0" prefWidth="140.0" text="Show All courses"/>
+
+    </children>
+
+
+</AnchorPane>

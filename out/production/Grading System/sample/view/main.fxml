@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.MainController">
+    <children>
+
+        <TableView fx:id="tblUsers" layoutX="221.0" layoutY="173.0" onMouseClicked="#tblColClick" prefHeight="219.0"
+                   prefWidth="449.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="colUserName" prefWidth="75.0" text="UserName"/>
+                <TableColumn fx:id="colFirstName" prefWidth="75.0" text="FirstName"/>
+                <TableColumn fx:id="colLastName" prefWidth="75.0" text="LastName"/>
+                <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email"/>
+                <TableColumn fx:id="colTelephone" prefWidth="75.0" text="Telephone"/>
+            </columns>
+        </TableView>
+        <Separator layoutX="205.0" layoutY="35.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="9.0"/>
+        <Separator layoutX="5.0" layoutY="28.0" prefHeight="7.0" prefWidth="678.0"/>
+        <VBox layoutX="14.0" layoutY="32.0" prefHeight="204.0" prefWidth="56.0" spacing="22.0">
+            <padding>
+                <Insets top="9.0"/>
+            </padding>
+            <children>
+                <Label text="Target" textFill="beige" style="-fx-background-color: darkred" prefWidth="56.0" textAlignment="CENTER">
+
+                </Label>
+                <Label text="ID"/>
+                <Label text="Username"/>
+                <Label text="Password"/>
+                <Label text="Name"/>
+                <Label text="Surname"/>
+                <Label text="Email"/>
+                <Label prefHeight="0.0" prefWidth="56.0" text="Telephone"/>
+            </children>
+        </VBox>
+        <VBox layoutX="78.0" layoutY="35.0" prefHeight="225.0" prefWidth="122.0" spacing="15.0">
+            <children>
+                <ChoiceBox fx:id="userType" layoutX="16.0" layoutY="52.0" prefWidth="150.0" value="student" >
+                    <items>
+                        <FXCollections fx:factory="observableArrayList" >
+                            <String fx:value="instructor" />
+                            <String fx:value="student" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <TextField fx:id="txtID" prefHeight="12.0" prefWidth="109.0"/>
+                <TextField fx:id="txtUserName" prefHeight="12.0" prefWidth="109.0"/>
+                <TextField fx:id="txtPassword" prefHeight="12.0" prefWidth="109.0"/>
+                <TextField fx:id="txtName" prefHeight="25.0" prefWidth="119.0"/>
+                <TextField fx:id="txtSurname" prefHeight="12.0" prefWidth="109.0"/>
+                <TextField fx:id="txtEmail" prefHeight="12.0" prefWidth="109.0"/>
+                <TextField fx:id="txtTelephone" prefHeight="12.0" prefWidth="109.0"/>
+                <Button fx:id="btnAdd" layoutX="135.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnAddClick"
+                        text="Add User"/>
+            </children>
+        </VBox>
+
+        <TextField fx:id="txtUpdateid" layoutX="218.0" layoutY="73.0" prefHeight="25.0" prefWidth="59.0"/>
+        <Button fx:id="btnSearch" layoutX="219.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnSearchClick"
+                prefHeight="25.0" prefWidth="56.0" text="Search"/>
+        <Button fx:id="btnUpdate" layoutX="292.0" layoutY="133.0" mnemonicParsing="false" onAction="#btnUpdateClick"
+                text="Update"/>
+        <Button fx:id="btnDelete" layoutX="365.0" layoutY="133.0" mnemonicParsing="false" onAction="#btnDeleteClick"
+                text="Delete"/>
+        <Button layoutX="427.0" layoutY="133.0" mnemonicParsing="false" onAction="#btnShowAllUser" prefHeight="25.0"
+                prefWidth="95.0" text="Show All Users"/>
+        <TextField fx:id="txtUpdateEmail" layoutX="295.0" layoutY="73.0" prefHeight="25.0" prefWidth="122.0"/>
+        <TextField fx:id="txtUpdateTelephone" layoutX="427.0" layoutY="73.0" prefHeight="25.0" prefWidth="95.0"/>
+        <Label layoutX="225.0" layoutY="42.0" text="ID"/>
+        <Label layoutX="295.0" layoutY="42.0" text="Email"/>
+        <Label layoutX="430.0" layoutY="42.0" text="Telephone"/>
+        <Button fx:id="btnEdit" layoutX="531.0" layoutY="133.0" mnemonicParsing="false" onAction="#editUser"
+                text="Edit"/>
+
+    </children>
+</AnchorPane>

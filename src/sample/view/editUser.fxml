@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="325.0" prefWidth="359.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditUserController">
+
+
+       <VBox layoutX="56.0" layoutY="32.0" prefHeight="204.0" prefWidth="56.0" spacing="22.0">
+           <children>
+               <Label text="Username">
+                   <padding>
+                       <Insets top="9.0" />
+                   </padding>
+               </Label>
+               <Label text="Password" />
+               <Label text="Name" />
+               <Label text="Surname" />
+               <Label text="Email" />
+               <Label prefHeight="0.0" prefWidth="56.0" text="Telephone" />
+                   </children>
+               </VBox>
+               <VBox layoutX="133.0" layoutY="35.0" prefHeight="225.0" prefWidth="122.0" spacing="15.0">
+                   <children>
+                       <TextField fx:id="txtUserName" prefHeight="12.0" prefWidth="109.0" />
+                       <TextField fx:id="txtPassword" prefHeight="12.0" prefWidth="109.0" />
+                       <TextField fx:id="txtName" prefHeight="25.0" prefWidth="119.0" />
+                       <TextField fx:id="txtSurname" prefHeight="12.0" prefWidth="109.0" />
+                       <TextField fx:id="txtEmail" prefHeight="12.0" prefWidth="109.0" />
+                       <TextField fx:id="txtTelephone" prefHeight="12.0" prefWidth="109.0" />
+                            </children>
+                        </VBox>
+                       <Button fx:id="btnUpdate" layoutX="203.0" layoutY="276.0" mnemonicParsing="false" onAction="#updateUserData" text="Update" />
+   </AnchorPane>
